@@ -7,7 +7,7 @@
                gameField.status === 'isActive' && 'game-screen__game-square__section--active',
                gameField.status === 'player' && 'game-screen__game-square__section--player', 
                gameField.status === 'computer' && 'game-screen__game-square__section--computer']"
-      :style="{width: `calc(400px / ${gameSettingsSelected.field})`}"
+      :style="{width: `calc(400px / ${gameSettingsSelected.field})`, height: `calc(400px / ${gameSettingsSelected.field})`}"
       @click="gameField.status === 'isActive' && handleClick(gameField.id)"
     />
   </div>
@@ -146,14 +146,14 @@ export default {
   display: flex;
   width: 400px;
   flex-wrap: wrap;
+  padding-top: 25px;
 
   &__row {
     display: flex;
   }
 
   &__section {
-    outline: 1px solid black;
-    height: 80px;
+    outline: 1px solid #999999;
     cursor: pointer;
 
     &--active {

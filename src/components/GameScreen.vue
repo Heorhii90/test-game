@@ -48,6 +48,9 @@ export default {
     &__container {
 
       display: flex;
+      justify-content: space-around;
+      padding-top: 50px;
+      border: 2px solid #e9e9cf;
     }
   }
 </style>
