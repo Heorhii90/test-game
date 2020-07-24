@@ -1,14 +1,33 @@
 <template>
   <div class="game-screen__game-controls">
-    <select v-model="gameMode" :disabled="gameIsStarted">
-      <option disabled value>Select game mode</option>
-      <option v-for="(setting, key) in gameSettings" :key="setting.id">{{ key }}</option>
+    <select 
+      v-model="gameMode"
+      :disabled="gameIsStarted"
+    >
+      <option
+        disabled 
+        value
+      >
+        Select game mode
+      </option>
+      <option
+        v-for="(setting, key) in gameSettings"
+        :key="setting.id"
+      >
+        {{ key }}
+      </option>
     </select>
-    <input v-model="playerName" type="text" :disabled="gameIsStarted" />
+    <input
+      v-model="playerName"
+      type="text"
+      :disabled="gameIsStarted"
+    >
     <button
       :disabled="gameIsStarted || isDisabled"
       @click="setGameValues"
-    >{{ gameStatusOvered ? 'Play again' : 'Play' }}</button>
+    >
+      {{ gameStatusOvered ? 'Play again' : 'Play' }}
+    </button>
   </div>
 </template>
 
@@ -60,7 +79,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .game-screen__game-controls {
-    display: flex;
-  }
+.game-screen__game-controls {
+  display: flex;
+}
 </style>

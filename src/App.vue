@@ -1,14 +1,16 @@
 <template>
   <div id="app">
+    <GameScreen />
   </div>
 </template>
 
 <script>
+import GameScreen from './components/GameScreen';
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    GameScreen,
+  }
 }
 </script>
-
-<style lang="scss">
-</style>
